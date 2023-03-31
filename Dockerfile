@@ -98,7 +98,7 @@ RUN sed -i 's#src#builds/release64/bin#g' /workspace/delfi/plan-ipc.py
 
 WORKDIR /work
 
-CMD /bin/bash
+ENTRYPOINT ["/usr/bin/python", "/workspace/delfi/plan-ipc.py", "--image-from-lifted-task"]
 
 
 
